@@ -25,11 +25,11 @@ int main()
 			}
 		}
 	}
-
+	std::cout << "List of enemies: " << std::endl;
 	for (Enemy enemyTest : enemies) {
-		std::cout << "List of enemies: " << enemyTest.name << "is a " << getEnemyTypeString(enemyTest.type) << "whose life is " << enemyTest.health << std::endl;
+		std::cout << enemyTest.name << "is a " << getEnemyTypeString(enemyTest.type) << "whose life is " << enemyTest.health << std::endl;
 	}
-
+	
 }
 
 

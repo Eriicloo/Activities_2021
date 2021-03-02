@@ -6,26 +6,24 @@
 enum class EnemyType { ZOMBIE, VAMPIRE, GHOST, WITCH };
 
 std::string getEnemyTypeString(EnemyType enemy) {
-	enemy = EnemyType::ZOMBIE;
-	std::string enemyType;
 
 	switch (enemy) {
 	case EnemyType::ZOMBIE:
-		enemyType = "ZOMBIE";
+		return "ZOMBIE";
 		break;
 	case EnemyType::VAMPIRE:
-		enemyType = "VAMPIRE";
+		return "VAMPIRE";
 		break;
 	case EnemyType::GHOST:
-		enemyType = "GHOST";
+		return "GHOST";
 		break;
 	case EnemyType::WITCH:
-		enemyType = "WITCH";
+		return "WITCH";
 		break;
 	default:
+		return "";
 		break;
 	}
-	return enemyType;
 }
 
 
@@ -36,9 +34,8 @@ struct Enemy {
 };
 
 bool equalEnemies(Enemy enemy1, Enemy enemy2) {
-	if (enemy1.type == enemy2.type && enemy1.name == enemy2.name) return true;
-	else return false;
-}
+	return (enemy1.type == enemy2.type && enemy1.name == enemy2.name);
+};
 
 Enemy createRandomEnemy() {
 	Enemy enemy;
